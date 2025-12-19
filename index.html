@@ -1,106 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Toko Buku</title>
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Selamat datang di program menghitung belanjaan!</h1>
+    <p id="deskripsi">Untuk memulai program, silahkan memasukkan input kedalam form. Selamat menikmati!</p>
 
-<script>
-	window.alert("=====Selamat datang di program menghitung belanjaan!=====")
-	
-	let hasil1 = 0
-	let hasil2 = 0
-	let hasil3 = 0
-	
-	let harga = 5000
-	let jumlahPengunjung = parseInt(prompt("Masukkan jumlah pengunjung: "))
-	let database = 0
-	let database2 = 0
-	<!-- let total3 = [] -->
-	let diskon2 = 0
-	let diskon3 = 0
-	let sum = 0 
-    
-	let i = 1
-	while (i <= jumlahPengunjung){
-		let jumlahBuku = parseInt(prompt("Masukkan jumlah buku: (angka bulat)"))
-		if(jumlahBuku <= 100){
-			let diskon = jumlahBuku * harga
-			<!-- total3.push({ -->
-				<!-- diskon -->
-			<!-- }) -->
-			
-			if (diskon > 0){
-			database = database + 1
-			hasil1 = hasil1 + diskon
-		} 
-			
-			
-			console.log(diskon)
-		} else if (jumlahBuku <= 200){
-			let total = 100 * harga * 0.95
-			let diskon2 = (jumlahBuku - 100) * harga * 0.85
-			let hasil11 = total + diskon2
-			
-			if (hasil11 > 0){
-			database = database + 1
-			hasil2 = hasil2 + hasil11
-		} 
-			<!-- total3.push({ -->
-				<!-- diskon2 -->
-			<!-- }) -->
-			
-			
-			
-			console.log(diskon2)
-		} else if (jumlahBuku > 200){
-			let total = 100 * harga * 0.93
-			let total2 = 100 * harga * 0.83
-			let diskon2 = (jumlahBuku - 200) * harga * 0.73
-			
-			let hasill = total + total2 + diskon2
-			
-			if (hasill > 0){
-			database2 = database + 1
-			hasil3 = hasil3 + hasill
-		}
-			<!-- total3.push({ -->
-				<!-- diskon3: diskon3 -->
-			<!-- }) -->
-			
-			
-			
-			console.log(diskon3)
-		}
-		
-		
-		
-		i = i + 1
-		
-		
-		
-		
-	}
-	
-	<!-- total3.forEach(nilai => { -->
-		<!-- sum += nilai; -->
-	<!-- }); -->
-	
-	console.log(hasil1)
-	console.log(hasil2)
-	console.log(hasil3)
-	
-	let hasil4 = hasil1 + hasil2 + hasil3
-	let rataRata = hasil4 / jumlahPengunjung
-	
-	console.log(`Total seluruh pendapatan adalah Rp.${hasil4}`)
-	console.log(`Rata rata pendapatan adalah Rp.${rataRata}`)
-	
-	console.log(`Total pembeli yang mendapatkan diskon kecil adalah ${database} pembeli`)
-	console.log(`Total pembeli yang mendapatkan diskon besar adalah ${database2} pembeli`)
-	
-</script>
+    <div>
+      <p id="inputan">Masukkan nama jumlah yang membeli: <input type="number" id="jumlahPembeli" /></p>
 
-</body>
+      <button onclick="menghitungBarang()">Submit</button>
+    </div>
+
+    <h4>Hasilnya adalah</h4>
+    <h4 id="infoUpdate"></h4>
+    <h4>============= Rekapan ===========</h4>
+    <h4 id="wow"></h4>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+    <!-- Akhir dari script -->
+  </body>
 </html>
