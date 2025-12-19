@@ -1,5 +1,4 @@
 function menghitungBarang(){
-    // Reset semua variabel
     let tanpaDiskon = 0;
     let diskonSatu = 0;
     let diskonDua = 0;
@@ -7,9 +6,8 @@ function menghitungBarang(){
     let database2 = 0;
     let i = 1;
 
-    const harga = 5000; // tetap konstan
+    const harga = 5000; 
 
-    // Kosongkan tampilan sebelumnya
     document.getElementById("infoUpdate").innerHTML = "";
     document.getElementById("wow").innerHTML = "";
 
