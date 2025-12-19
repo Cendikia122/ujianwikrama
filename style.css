@@ -13,7 +13,7 @@ h1 {
   color: #1a1a1a;
 }
 
-/* Paragraf */
+
 
 deskripsi{
 	text-align: center;
@@ -23,7 +23,6 @@ inputan{
 	text-align: left;
 }
 
-/* Form input */
 input[type="number"] {
   font-family: inherit;
   font-size: 14px;
